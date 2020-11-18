@@ -1,0 +1,23 @@
+ <script type="text/javascript">
+var wsServer = 'ws://127.0.0.1:9502';	//打开一个websocket
+var websocket = new WebSocket(wsServer);	
+websocket.onopen = function (evt) {
+    console.log("Connected to WebSocket server.");
+     websocket.send("data....");	//发送数据
+};
+
+//关闭socket时
+websocket.onclose = function (evt) {
+    console.log("Disconnected");	
+};
+
+//接收数据
+websocket.onmessage = function (evt) {
+	console.log(evt);
+    console.log('Received data from server: ' + evt.data);
+};
+
+websocket.onerror = function (evt, e) {
+    console.log('Error occured: ' + evt.data);
+};
+</script>
