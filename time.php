@@ -48,7 +48,7 @@ echo "<br/>first day of this month: " . date('c', strtotime('first day of this m
 echo "<br/>first day of this month  00:00:00  : " . date('c', strtotime('first day of this month 00:00:00'));
 echo "<br/>first day of this month: " . date('c', strtotime('first day of this month midnight'));
 echo "<br/>last day of this month: " . date('c', strtotime('last day of this month midnight'));
-echo "<br/>last day of this month: " . date('c', strtotime('last day of this month midnight'));
+echo "<br/>first day of this month: " . date('c', strtotime('last day of this month midnight'));
 
 echo "<br/><br/>reltext space 'week'";
 echo "monday 和monday this week 不是同一天";
