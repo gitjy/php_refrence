@@ -21,6 +21,7 @@ echo "<br/>midnight: " . date('c', strtotime('midnight'));
 echo "<br/>noon: " . date('c', strtotime('noon'));
 echo "<br/>tomorrow: " . date('c', strtotime('tomorrow'));
 echo "<br/>yestday: " . date('c', strtotime('yesterday'));
+
 echo "<br/><br/>当前天开始";
 echo "<br/> 00:00 = today = 0.0";
 echo "<br/>today: " . date('c', strtotime('today'));
@@ -41,10 +42,12 @@ echo "<br/>date('Y-m-d H:i:s') midnight" . date('c', strtotime(date('Y-m-d H:i:s
 
 echo "<br/>2018-12-03: " . date('c', strtotime('2018-12-03'));
 
+echo "<br/><br/>月份";
 echo "<br/>";
 echo "<br/>first day of this month: " . date('c', strtotime('first day of this month'));
 echo "<br/>first day of this month  00:00:00  : " . date('c', strtotime('first day of this month 00:00:00'));
 echo "<br/>first day of this month: " . date('c', strtotime('first day of this month midnight'));
+echo "<br/>last day of this month: " . date('c', strtotime('last day of this month midnight'));
 echo "<br/>last day of this month: " . date('c', strtotime('last day of this month midnight'));
 
 echo "<br/><br/>reltext space 'week'";
