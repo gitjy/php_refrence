@@ -115,3 +115,15 @@ function word() {
 function pregWord() {
 	return '~16dy|18|18岁|18禁|1989年镇压|\w{8,}~';
 }
+
+
+echo "<br/><br/>替换strtr：preg</br>";
+$msg = '带诚意金订单不可删除哦';
+var_dump(strtr($msg, '诚意金', '押金'));
+var_dump(strtr($msg, ['诚意金' => '押金']));
+$val = var_export($msg, 1);
+$en = strtr($val, ['诚意金' => '押金']);
+eval('$de=' . $en . ';');
+var_dump($val, $de);
+var_dump(str_replace('诚意金', '押金', $msg));
+var_dump(preg_replace('/诚意金/', '押金', $msg));
