@@ -6,7 +6,7 @@ echo "<br/>c " . date('c');
 echo "<br/>ymd " . date('ymd');
 echo "<br/>date('t')计算这个月有多少天 t " . date('t');
 echo "<br/>星期几 N " . date('N');
-echo "<br/>月份 " . date('nd');
+echo "<br/>月份n " . date('n');
 echo "<br/>" . date('Y-m-d H:i:s');
 echo "<br/>-1 day: " . date('c', strtotime('-1 day'));
 echo "<br/>-1 days: " . date('c', strtotime('-1 days'));
