@@ -4,8 +4,9 @@
 **/
 //header('Content-Type:text/html;charset=gbk');
 $filename = __DIR__ . '/file.csv';
+$filename =  './file.csv';
 $infile = __DIR__ . '/data.json';
-//$handle = @fopen($filename, "r");
+$handle = @fopen($filename, "r");
 //$keys = format(fgets($handle));
 //$keys = fgetcsv($handle);
 if ($handle) {

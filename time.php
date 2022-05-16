@@ -37,6 +37,7 @@ echo "<br/>20200320 +1 day" . date('c', strtotime('20200320 +1 day'));
 echo "<br/>midnight -3 day noon: " . date('c', strtotime('midnight -3 day noon'));
 
 echo "<br/><br/>";
+echo "<br/>Ymd H:i:s   " . date('c', strtotime(date('Ymd H:i:s')));
 echo "<br/>date('Y-m-d H:i:s') 00:00 无效" . date('c', strtotime(date('Y-m-d H:i:s') . ' 00:00'));
 echo "<br/>date('Y-m-d H:i:s') midnight" . date('c', strtotime(date('Y-m-d H:i:s') . ' midnight'));
 
@@ -69,7 +70,7 @@ echo "<br/>today last week: " . date('c', strtotime('today last week'));
 echo "<br/>Monday previous week: " . date('c', strtotime('Monday previous week'));
 echo "<br/>Monday last week: " . date('c', strtotime('Monday last week'));
 echo "<br/>last Sat 上一个周六: " . date('c', strtotime('last Sat'));
-echo "<br/>last Sat of this month 最后一个周六" . date('c', strtotime('last Sat of this month'));
+echo "<br/>last Sat of this month 这个月最后一个周六" . date('c', strtotime('last Sat of this month'));
 echo "<br/>last Sat  this month 实际是 last Sat " . date('c', strtotime('last Sat  this month'));
 echo "<br/>noon -1 week " . date('c', strtotime('noon -1 week'));
 echo "<br/>weekdays " . date('c', strtotime('weekdays'));
