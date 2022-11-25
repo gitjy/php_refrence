@@ -2,20 +2,27 @@
 echo date_default_timezone_get();
 date_default_timezone_set('Asia/Shanghai');
 echo '<br/>set default timezone:',date_default_timezone_get();
-echo "<br/>c " . date('c');
+
+echo "<br/><br/>date的使用";
+echo "<br/>ISO 8601 日期 c " . date('c');
 echo "<br/>ymd " . date('ymd');
 echo "<br/>date('t')计算这个月有多少天 t " . date('t');
 echo "<br/>星期几 N " . date('N');
 echo "<br/>月份n " . date('n');
+echo "<br/>当年第几周 W" . date('W');
+echo "<br/>一年中第几天 z " . date('z');
 echo "<br/>" . date('Y-m-d H:i:s');
+echo "<br/>01 M Y: " . date('01 M Y');
+
+
 echo "<br/>-1 day: " . date('c', strtotime('-1 day'));
 echo "<br/>-1 days: " . date('c', strtotime('-1 days'));
 echo "<br/>+1 day: " . date('c', strtotime('+1 day'));
 echo "<br/><br/>+2 days today = today +2 days";
 echo "<br/>+2 days today: " . date('c', strtotime('+2 days today'));
 echo "<br/>today +2 days " . date('c', strtotime('today +2 days'));
-echo "<br/>Y-M-01: " . date('Y-M-01');
-echo "<br/>Y-m-01: " . date('c', strtotime(date('Y-M-01')));
+
+echo "<br/>Y-m-01: " . date('c', strtotime(date('Y-m-01')));
 echo "<br/>now:". date('c', strtotime('now')), "</br>";
 echo "<br/>noon: " . date('c', strtotime('noon'));
 echo "<br/>tomorrow: " . date('c', strtotime('tomorrow'));
@@ -60,17 +67,23 @@ echo "<br/>twelfth month:". date('c', strtotime('twelfth month')), "</br>";
 echo "<br/>first day of last month: " . date('c', strtotime('first day of last month midnight'));
 echo "<br/>last day of last month: " . date('c', strtotime('last day of last month midnight'));
 
-echo "<br/><br/>reltext space 'week'";
-echo "monday 和monday this week 不是同一天";
+echo "<br/><br/>reltext space 'week' 单用week无效";
+echo "<br/>monday 和monday this week 不是同一天";
 echo "<br/>monday: " . date('c', strtotime('monday'));
-echo "<br/>tuesday: " . date('c', strtotime('tuesday'));
-echo "<br/>this week: " . date('c', strtotime('this week'));
 echo "<br/>Monday  this week: " . date('c', strtotime(' monday  this week'));
+
+echo "<br/>tuesday: " . date('c', strtotime('tuesday'));
+echo "<br/>week: " . date('c', strtotime('week'));
+echo "<br/>date('W') week: " . date('W');
+echo "<br/>this week: " . date('c', strtotime('this week'));
+echo "<br/>previous week: " . date('c', strtotime('previous week'));
+echo "<br/>last week: " . date('c', strtotime('last week'));
+
+
 echo "<br/>sunday this week: " . date('c', strtotime('sunday this week'));
 echo "<br/>today this week: " . date('c', strtotime('today this week'));
 echo "<br/>today -1 week: " . date('c', strtotime('today -1 week'));
-echo "<br/>previous week: " . date('c', strtotime('previous week'));
-echo "<br/>last week: " . date('c', strtotime('last week'));
+
 echo "<br/>today previous week: " . date('c', strtotime('today previous week'));
 echo "<br/>today last week: " . date('c', strtotime('today last week'));
 echo "<br/>Monday previous week: " . date('c', strtotime('Monday previous week'));
